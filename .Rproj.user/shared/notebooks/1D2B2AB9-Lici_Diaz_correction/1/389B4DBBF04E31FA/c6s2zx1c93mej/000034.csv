@@ -1,0 +1,5 @@
+"0","f <- subset(linkdataset, linkdataset$year.y == linkdataset$year_admission)"
+"0",""
+"0","g <- subset(f, linkdataset$month >= linkdataset$month_admission & linkdataset$month <= linkdataset$month_discharge)"
+"0",""
+"0","g"

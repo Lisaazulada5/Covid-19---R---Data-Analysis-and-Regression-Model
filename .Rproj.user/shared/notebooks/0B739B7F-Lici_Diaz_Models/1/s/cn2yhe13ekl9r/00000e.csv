@@ -1,0 +1,7 @@
+"0","example_lab_data_wide <- pivot_wider("
+"0","  example_lab_data,"
+"0","  id_cols = NULL,"
+"0","  id_expand = FALSE,"
+"0","  names_from = lab_exam,"
+"0","  values_from = result)"
+"0","print(example_lab_data_wide)"

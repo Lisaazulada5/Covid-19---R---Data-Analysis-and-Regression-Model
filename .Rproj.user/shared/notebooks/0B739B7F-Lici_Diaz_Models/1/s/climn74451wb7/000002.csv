@@ -1,0 +1,4 @@
+"0","pirateplot(formula = hospital_los ~ covid, "
+"0","           data = linkdataset_month,"
+"0","           pal = ""pony"", "
+"0","           main = ""Covid vs hospital_los"") "

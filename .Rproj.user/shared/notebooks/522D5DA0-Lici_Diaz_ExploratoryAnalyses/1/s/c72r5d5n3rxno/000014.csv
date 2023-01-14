@@ -1,0 +1,1 @@
+"0","synthetic_data[synthetic_data$patient_id %in% repeated_patients_syntetic_data$Var1[repeated_patients_syntetic_data$Freq > 1],]"

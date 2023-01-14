@@ -1,0 +1,6 @@
+"0","#pireplot"
+"0",""
+"0","pirateplot(formula = hospital_los_log ~ infection, "
+"0","           data = linkdataset,"
+"0","           pal = ""pony"", "
+"0","           main = ""infection vs hospital_days"") "

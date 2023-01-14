@@ -1,0 +1,2 @@
+"0","synthetic_data <- read.table('synthetic_data.csv', sep=',', header=TRUE)"
+"0","head(synthetic_data)"

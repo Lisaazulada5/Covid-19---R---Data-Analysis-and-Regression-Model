@@ -1,0 +1,3 @@
+"0","nullsum_example_lab_data <- sapply(example_lab_data, function(x) sum(is.na(x))) "
+"0","nullsum_synthetic_data <- sapply(synthetic_data, function(x) sum(is.na(x)))"
+"0",""

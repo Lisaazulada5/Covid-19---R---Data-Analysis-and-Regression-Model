@@ -1,0 +1,10 @@
+"0","ggqqplot(synthetic_data$creatinine_peak)"
+"2","Warning:"
+"2"," Removed 88 rows containing non-finite values (stat_qq).
+"
+"2","Warning:"
+"2"," Removed 88 rows containing non-finite values (stat_qq_line).
+"
+"2","Warning:"
+"2"," Removed 88 rows containing non-finite values (stat_qq_line).
+"

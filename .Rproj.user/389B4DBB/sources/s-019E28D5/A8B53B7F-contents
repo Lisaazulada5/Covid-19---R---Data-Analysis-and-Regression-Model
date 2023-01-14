@@ -1,0 +1,24 @@
+# Dataframe from csv files:
+example_lab_data <- read.table('example_lab_data.csv', sep=',', header=TRUE)
+head(example_lab_data)
+synthetic_data <- read.table('synthetic_data.csv', sep=',', header=TRUE)
+head(synthetic_data)
+
+#Remove any extraneous rows or columns:
+
+synthetic_data <- synthetic_data[,!names(synthetic_data) %in% c("diagnosis_icd10",
+                                                                "supplemental_diagnoses",
+                                                                "bsa", "distal_perfusion",
+                                                                "trauma", "infective_endocarditis", 
+                                                                "severity_score",
+                                                                "icu_los",
+                                                                "insurance",
+                                                                "proning", 
+                                                                "cpc_score",
+                                                                "il_6_blockers", 
+                                                                "antivirals",
+                                                                "antimalarials",
+                                                                "number_pt_visits_total_hosp_stay	or_cannulation",
+                                                                "total_charges")]
+
+synthetic_data

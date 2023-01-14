@@ -1,0 +1,14 @@
+"0","synthetic_data[synthetic_data == 'Not Available' ] <- NA"
+"0","synthetic_data[synthetic_data == 'no info from OSH' ] <- NA"
+"0","synthetic_data[synthetic_data == 'No data avail' ] <- NA"
+"0","synthetic_data[synthetic_data == 'Not Measured, pt coded' ] <- NA"
+"0","synthetic_data[synthetic_data == 'not measured' ] <- NA"
+"0",""
+"0","synthetic_data$ph <- parse_number(synthetic_data$ph)"
+"2","Warning:"
+"2"," 1 parsing failure.
+row col expected actual
+137  -- a number      N
+
+"
+"0","synthetic_data"

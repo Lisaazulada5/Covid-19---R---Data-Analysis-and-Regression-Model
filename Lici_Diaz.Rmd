@@ -1,0 +1,336 @@
+---
+title: "Lici_Díaz.Rmd"
+author: "Lici Díaz"
+date: "5/12/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+library(Hmisc)
+library(psych)
+library(ggpubr)
+library(readr)
+library(tibble)
+library(dplyr) 
+library(magrittr)
+```
+
+*Dataframe from csv files:*
+
+```{r example_lab_data, synthetic_data}
+example_lab_data <- read.table('example_lab_data.csv', sep=',', header=TRUE)
+head(example_lab_data)
+synthetic_data <- read.table('synthetic_data.csv', sep=',', header=TRUE)
+head(synthetic_data)
+```
+
+*Remove any extraneous rows or columns:*
+
+*Ensure that columns with numeric variables don’t have characters*
+#Count number of nulls per column
+
+```{r}
+sapply(example_lab_data, function(x) sum(is.na(x)))
+sapply(synthetic_data, function(x) sum(is.na(x)))
+
+```
+#drop columns with NA > 300 observations:
+
+```{r}
+synthetic_data <- synthetic_data[,!names(synthetic_data) %in% c("diagnosis_icd10","supplemental_diagnoses", "bsa", "distal_perfusion",
+ "trauma", "infective_endocarditis",  "severity_score", "icu_los","insurance", "proning",  "il_6_blockers", "antivirals","antimalarials", "number_pt_visits_total_hosp_stay","or_cannulation", "steroid_name", "complication_mechanical", "mcs12", "qal_ys", "pcs12", "monoclonal_ab_treatment","total_charges","or_cannulation", "complication_patient_limb", "complication_pulmonary", "complication_renal", "complication_hemorrhage", "complication_mechanical", "complication_neurological", "complication_cardiovascular", "complication_metabolic", "cpc_score")]
+```
+
+
+*Review patient IDs and address repeated patients:*
+
+*For example_lab_data*
+
+```{r}
+repeated_patients_lab_data <- data.frame(table(example_lab_data$patient_id))
+repeated_patients_lab_data  <- repeated_patients_lab_data[repeated_patients_lab_data$Freq > 1,]
+```
+
+*For synthetic_data*
+
+```{r}
+repeated_patients_syntetic_data <- data.frame(table(synthetic_data$patient_id))
+repeated_patients_syntetic_data <- repeated_patients_syntetic_data[repeated_patients_syntetic_data$Freq > 1,]
+```
+
+*tells you which patient_id occurred more than once:*
+
+```{r}
+example_lab_data[example_lab_data$patient_id %in% repeated_patients_lab_data$Var1[repeated_patients_lab_data$Freq > 1],]
+
+synthetic_data[synthetic_data$patient_id %in% repeated_patients_syntetic_data$Var1[repeated_patients_syntetic_data$Freq > 1],]
+```
+
+*drop duplicate patient_id, use only the first (oldest) visit:*
+
+#For example_lab_data, Sort dataframe by patient_id and date:
+
+```{r}
+example_lab_data <- example_lab_data[order(example_lab_data$patient_id,example_lab_data$date ),]
+```
+
+#Drop duplicates dataframe by patient_id:
+
+```{r}
+example_lab_data <- example_lab_data[!duplicated(example_lab_data$patient_id), ]
+```
+
+#For synthetic_data, Sort dataframe by patient_id and admission_date:
+
+```{r}
+synthetic_data <- synthetic_data[order(synthetic_data$patient_id,synthetic_data$admission_date ),]
+```
+
+#Drop duplicates dataframe by patient_id:
+
+```{r}
+synthetic_data <- synthetic_data[!duplicated(synthetic_data$patient_id), ]
+```
+
+*Ensure that columns with numeric variables don’t have characters*
+
+#Fill empty values with NA:
+
+```{r}
+example_lab_data[example_lab_data == ''] <- NA
+synthetic_data[synthetic_data == ''] <- NA
+example_lab_data[example_lab_data == 'UTC'] <- NA
+synthetic_data[synthetic_data == 'UTC'] <- NA
+example_lab_data[example_lab_data == 'NDA'] <- NA
+synthetic_data[synthetic_data == 'NDA'] <- NA
+example_lab_data[example_lab_data == 'N/A'] <- NA
+synthetic_data[synthetic_data == 'N/A'] <- NA
+```
+
+#find character on numeric columns:
+
+```{r}
+synthetic_data[synthetic_data == 'Not Available' ] <- NA
+synthetic_data[synthetic_data == 'no info from OSH' ] <- NA
+synthetic_data[synthetic_data == 'No data avail' ] <- NA
+synthetic_data[synthetic_data == 'Not Measured, pt coded' ] <- NA
+synthetic_data[synthetic_data == 'not measured' ] <- NA
+
+synthetic_data$ph <- parse_number(synthetic_data$ph)
+```
+
+#Some variables will have more than one value in the same cell, separated by a comma. 
+
+*Use average for mechanical_vent_days in days not hours*
+
+```{r}
+synthetic_data$mechanical_vent_days[synthetic_data$mechanical_vent_days == '<= 12h'] <- 0.5
+synthetic_data$mechanical_vent_days[synthetic_data$mechanical_vent_days == '12h - 24h'] <- 7
+synthetic_data$mechanical_vent_days[synthetic_data$mechanical_vent_days == '>= 7 days'] <- 0.75
+synthetic_data$mechanical_vent_days[synthetic_data$mechanical_vent_days == '2 days - 7 days'] <- 4.5
+```
+
+#change chr to number column
+
+```{r}
+synthetic_data$mechanical_vent_days <- as.numeric(synthetic_data$mechanical_vent_days)  
+```
+
+#drop first row (just NA values)
+
+```{r}
+synthetic_data = synthetic_data[-1,]
+```
+*Evaluate if categorical variables have any category with a low frequency:*
+
+#Uses frecuency tables:
+
+#standarizes sex colum:
+
+```{r}
+synthetic_data$sex[synthetic_data$sex == 'Female'] <- "F"
+synthetic_data$sex[synthetic_data$sex == 'Male'] <- "M"
+
+
+table(synthetic_data$sex)
+
+
+table(synthetic_data$race)
+
+table(synthetic_data$diagnosis)
+
+table(synthetic_data$reintubation)
+
+table(synthetic_data$trached)
+
+
+table(synthetic_data$systemic_anticoagulation_type)
+
+table(synthetic_data$acute_kidney_injury)
+
+table(synthetic_data$discharge_location)
+
+synthetic_data$steroids[synthetic_data$steroids == 'Unk'] <- "unk"
+synthetic_data$steroids[synthetic_data$steroids == 'unk'] <- NA
+table(synthetic_data$steroids)
+
+
+synthetic_data$infection[synthetic_data$infection == 'R/V/SARS CoV19'] <- 'SARS CoV19'
+synthetic_data$infection[synthetic_data$infection == 'R/V/COVID-19'] <- 'SARS CoV19'
+synthetic_data$infection[synthetic_data$infection == 'Hx of COVID19 - 1/2022'] <- 'SARS CoV19'
+synthetic_data$infection[synthetic_data$infection == 'P/R/V/ Covid-19, P/R/GM+/ Strep sp, P/B/GM+/ Staph captis'] <- 'SARS CoV19'
+
+
+synthetic_data$infection[synthetic_data$infection != 'SARS CoV19'] <- 'Other'
+
+table(synthetic_data$infection)
+
+table(synthetic_data$support_type)
+
+table(synthetic_data$transfer)
+
+table(synthetic_data$covid)
+
+table(synthetic_data$pregnant)
+```
+
+#for example_lab_data:
+
+```{r}
+table(example_lab_data$lab_exam) 
+```
+
+*Make sure that time variables are consistently coded:*
+#convert char column into posixct
+
+```{r}
+synthetic_data[['admission_date']] <- as.POSIXct(synthetic_data[['admission_date']],
+                                   format = "%Y-%m-%d")
+                                   
+
+synthetic_data[['discharge_date']] <- as.POSIXct(synthetic_data[['discharge_date']],
+                                   format = "%Y-%m-%d")
+
+synthetic_data[['death_date']] <- as.POSIXct(synthetic_data[['death_date']],
+                                   format = "%Y-%m-%d")
+```
+
+#for example_lab_data:
+
+```{r}
+example_lab_data[['date']] <- as.POSIXct(example_lab_data[['date']],
+                                   format = "%Y-%m-%d")
+```
+
+*Evaluate the distribution of numeric variables:*
+
+#for that, first convert to factors:
+
+```{r}
+example_lab_data$lab_exam <- as.factor(example_lab_data$lab_exam)     
+
+synthetic_data$sex <- as.factor(synthetic_data$sex) 
+synthetic_data$race  <- as.factor(synthetic_data$race) 
+synthetic_data$diagnosis  <- as.factor(synthetic_data$diagnosis) 
+synthetic_data$reintubation  <- as.factor(synthetic_data$reintubation) 
+synthetic_data$trached  <- as.factor(synthetic_data$trached) 
+
+synthetic_data$systemic_anticoagulation_type <- as.factor(synthetic_data$systemic_anticoagulation_type) 
+
+synthetic_data$acute_kidney_injury <- as.factor(synthetic_data$acute_kidney_injury)
+ 
+synthetic_data$discharge_location <- as.factor(synthetic_data$discharge_location)
+ 
+synthetic_data$steroids <- as.factor(synthetic_data$steroids)
+synthetic_data$infection <- as.factor(synthetic_data$infection)
+synthetic_data$support_type <- as.factor(synthetic_data$support_type)
+synthetic_data$transfer <- as.factor(synthetic_data$transfer)
+synthetic_data$covid <- as.factor(synthetic_data$covid)
+synthetic_data$pregnant <- as.factor(synthetic_data$pregnant)
+synthetic_data$mechanical_vent_days <- as.factor(synthetic_data$mechanical_vent_days)
+```
+
+*We can evaluate normality according to swek and kurtosis:*
+#statistical summary number variables:
+
+```{r}
+describe(synthetic_data$weight_kg)
+describe(synthetic_data$height_cm)
+describe(synthetic_data$bmi)
+describe(synthetic_data$ph)
+describe(synthetic_data$co2)
+describe(synthetic_data$o2)
+describe(synthetic_data$lactate_peak)
+describe(synthetic_data$creatinine_peak)
+describe(synthetic_data$total_bilirubin_peak)
+describe(synthetic_data$hospital_los)
+describe(synthetic_data$days_to_discharge)
+```
+
+*normal graph*
+
+#As all the points fall approximately along this reference line, we can assume normality.
+
+``` {r synthetic_data}
+ggqqplot(synthetic_data$weight_kg)
+ggqqplot(synthetic_data$height_cm)
+ggqqplot(synthetic_data$bmi)
+ggqqplot(synthetic_data$ph)
+ggqqplot(synthetic_data$co2)
+ggqqplot(synthetic_data$o2)
+ggqqplot(synthetic_data$lactate_peak)
+ggqqplot(synthetic_data$creatinine_peak)
+ggqqplot(synthetic_data$total_bilirubin_peak)
+ggqqplot(synthetic_data$hospital_los)
+ggqqplot(synthetic_data$days_to_discharge)
+```
+
+*not normal numeric variables:*
+
+synthetic_data$bmi
+synthetic_data$o2
+synthetic_data$lactate_peak
+synthetic_data$total_bilirubin_peak
+synthetic_data$hospital_los
+synthetic_data$days_to_discharge
+
+*If a numeric variable does not have a normal distribution, you may log transform it and re-evaluate the distribuion:*
+
+#log transformation:
+
+```{r}
+synthetic_data$bmi_log = log(synthetic_data$bmi)
+```
+
+#graph to evaluate normality
+
+```{r synthetic_data log}
+ggqqplot(synthetic_data$bmi_log)
+
+
+synthetic_data$o2_log = log(synthetic_data$o2)
+ggqqplot(synthetic_data$o2_log)
+
+synthetic_data$lactate_peak_log = log(synthetic_data$lactate_peak)
+ggqqplot(synthetic_data$lactate_peak_log)
+
+synthetic_data$total_bilirubin_peak_log = log(synthetic_data$total_bilirubin_peak)
+ggqqplot(synthetic_data$total_bilirubin_peak_log)
+
+synthetic_data$hospital_los_log = log(synthetic_data$hospital_los)
+ggqqplot(synthetic_data$hospital_los_log)
+
+synthetic_data$days_to_discharge_log = log(synthetic_data$days_to_discharge)
+ggqqplot(synthetic_data$days_to_discharge_log)
+```
+*Bonus challange: Convert dataframe to tibble:*
+
+```{r}
+synthetic_data <- as.tbl(synthetic_data)
+example_lab_data <- as.tbl(example_lab_data)
+```
+
+
+

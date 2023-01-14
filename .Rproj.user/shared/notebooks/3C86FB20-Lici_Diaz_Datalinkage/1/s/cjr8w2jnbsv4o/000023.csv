@@ -1,0 +1,6 @@
+"0","#pireplot"
+"0",""
+"0","p <- pirateplot(formula = icu_los ~ infection, "
+"0","           data = linkdataset_month,"
+"0","           pal = ""pony"", "
+"0","           main = ""Covid vs CO2"") "

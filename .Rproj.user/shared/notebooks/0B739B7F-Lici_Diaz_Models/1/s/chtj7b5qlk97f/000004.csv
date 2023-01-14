@@ -1,0 +1,5 @@
+"0",""
+"0","pirateplot(formula = icu_los ~ death, "
+"0","           data = linkdataset,"
+"0","           pal = ""pony"", "
+"0","           main = ""death vs icu_los"") "

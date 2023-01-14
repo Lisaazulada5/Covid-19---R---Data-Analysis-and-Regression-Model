@@ -1,0 +1,5 @@
+"0","linkdataset_month <- subset(linkdataset_year, linkdataset$month >= linkdataset$month_admission & linkdataset$month <= linkdataset$month_discharge)"
+"0",""
+"0","linkdataset_month <- subset(linkdataset_year, linkdataset_year$month >= linkdataset_year$month_admission & linkdataset_year$month <= linkdataset_year$month_discharge)"
+"0",""
+"0","linkdataset_month"

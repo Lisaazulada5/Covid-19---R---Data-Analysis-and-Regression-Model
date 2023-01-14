@@ -1,0 +1,11 @@
+"0","synthetic_data$total_bilirubin_peak_log = log(synthetic_data$total_bilirubin_peak)"
+"0","ggqqplot(synthetic_data$total_bilirubin_peak_log)"
+"2","Warning:"
+"2"," Removed 81 rows containing non-finite values (stat_qq).
+"
+"2","Warning:"
+"2"," Removed 81 rows containing non-finite values (stat_qq_line).
+"
+"2","Warning:"
+"2"," Removed 81 rows containing non-finite values (stat_qq_line).
+"

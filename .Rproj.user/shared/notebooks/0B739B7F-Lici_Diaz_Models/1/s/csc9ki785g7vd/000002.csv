@@ -1,0 +1,6 @@
+"0","#on the other hand, if we want to obtain relationship for icu_los and infection:"
+"0",""
+"0","pirateplot(formula = icu_los ~ infection, "
+"0","           data = linkdataset,"
+"0","           pal = ""pony"", "
+"0","           main = ""infection vs icu_los"") "

@@ -1,0 +1,324 @@
+"1","
+"
+"2","installing the source package ‘soilDB’
+
+"
+"2","trying URL 'https://cran.rstudio.com/src/contrib/soilDB_2.7.6.tar.gz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 797306 bytes (778 KB)
+"
+"2","downloaded 778 KB
+
+"
+"1","* installing *source* package 'soilDB' ...
+"
+"1","** package 'soilDB' successfully unpacked and MD5 sums checked
+"
+"1","** using staged installation
+"
+"1","** R
+"
+"1","** data
+"
+"1","** inst
+"
+"1","** byte-compile and prepare package for lazy loading
+"
+"1","** help
+"
+"1","*** installing help indices
+"
+"1","  converting help for package 'soilDB'
+"
+"1","    finding HTML links ... done
+"
+"1","    ISSR800.wcs                             html  
+"
+"1","    KSSL_VG_model                           html  
+"
+"1","    NASISChoiceList                         html  
+"
+"1","    NASISDomainsAsFactor                    html  
+"
+"1","    NASIS_table_column_keys                 html  
+"
+"1","    OSDquery                                html  
+"
+"1","    ROSETTA                                 html  
+"
+"1","    SCAN_SNOTEL_metadata                    html  
+"
+"1","    SDA_query                               html  
+"
+"1","    SDA_spatialQuery                        html  
+"
+"1","    STRplot                                 html  
+"
+"1","    SoilWeb_spatial_query                   html  
+"
+"1","    WCS_details                             html  
+"
+"1","    createSSURGO                            html  
+"
+"1","    createStaticNASIS                       html  
+"
+"1","    dbConnectNASIS                          html  
+"
+"1","    dbQueryNASIS                            html  
+"
+"1","    dot-get_SRI_gdb_names                   html  
+"
+"1","    downloadSSURGO                          html  
+"
+"1","    estimateColorMixture                    html  
+"
+"1","    estimateSTR                             html  
+"
+"1","    fetchGDB                                html  
+"
+"1","    fetchHenry                              html  
+"
+"1","    fetchKSSL                               html  
+"
+"1","    fetchLDM                                html  
+"
+"1","    fetchNASIS                              html  
+"
+"1","    fetchNASISLabData                       html  
+"
+"1","    fetchNASISWebReport                     html  
+"
+"1","    fetchOSD                                html  
+"
+"1","    fetchPedonPC                            html  
+"
+"1","    fetchRaCA                               html  
+"
+"1","    fetchSCAN                               html  
+"
+"1","    fetchSDA                                html  
+"
+"1","    fetchSDA_spatial                        html  
+"
+"1","    fetchSRI                                html  
+"
+"1","    fetchSoilGrids                          html  
+"
+"1","    fetchVegdata                            html  
+"
+"1","    filter_geochem                          html  
+"
+"1","    format_SQL_in_statement                 html  
+"
+"1","    getHzErrorsNASIS                        html  
+"
+"1","    get_EDIT_ecoclass_by_geoUnit            html  
+"
+"1","    get_NASIS_metadata                      html  
+"
+"1","    get_NASIS_table_key_by_name             html  
+"
+"1","    get_NASIS_table_name_by_purpose         html  
+"
+"1","    get_NOAA_GHCND                          html  
+"
+"1","    get_NOAA_stations_nearXY                html  
+"
+"1","    get_OSD                                 html  
+"
+"1","    get_SDA_coecoclass                      html  
+"
+"1","    get_SDA_cosurfmorph                     html  
+"
+"1","    get_SDA_hydric                          html  
+"
+"1","    get_SDA_interpretation                  html  
+"
+"1","    get_SDA_metrics                         html  
+"
+"1","    get_SDA_muaggatt                        html  
+"
+"1","    get_SDA_pmgroupname                     html  
+"
+"1","    get_SDA_property                        html  
+"
+"1","    get_SDV_legend_elements                 html  
+"
+"1","    get_SRI                                 html  
+"
+"1","    get_SRI_layers                          html  
+"
+"1","    get_colors_from_NASIS_db                html  
+"
+"1","    get_colors_from_pedon_db                html  
+"
+"1","    get_comonth_from_NASIS_db               html  
+"
+"1","    get_component_data_from_NASIS_db        html  
+"
+"1","    get_cosoilmoist_from_NASIS              html  
+"
+"1","    get_extended_data_from_NASIS_db         html  
+"
+"1","    get_extended_data_from_pedon_db         html  
+"
+"1","    get_hz_data_from_NASIS_db               html  
+"
+"1","    get_hz_data_from_pedon_db               html  
+"
+"1","    get_lablayer_data_from_NASIS_db         html  
+"
+"1","    get_labpedon_data_from_NASIS_db         html  
+"
+"1","    get_mapunit_from_NASIS                  html  
+"
+"1","    get_site_data_from_NASIS_db             html  
+"
+"1","    get_site_data_from_pedon_db             html  
+"
+"1","    get_soilDB_env                          html  
+"
+"1","    get_soilseries_from_NASIS               html  
+"
+"1","    get_text_notes_from_NASIS_db            html  
+"
+"1","    get_veg_data_from_NASIS_db              html  
+"
+"1","    get_veg_from_AK_Site                    html  
+"
+"1","    get_veg_from_MT_veg_db                  html  
+"
+"1","    get_veg_from_NPS_PLOTS_db               html  
+"
+"1","    get_veg_other_from_MT_veg_db            html  
+"
+"1","    get_veg_species_from_MT_veg_db          html  
+"
+"1","    loafercreek                             html  
+"
+"1","    local_NASIS_defined                     html  
+"
+"1","    makeChunks                              html  
+"
+"1","    make_EDIT_service_URL                   html  
+"
+"1","    metadata                                html  
+"
+"1","    mukey.wcs                               html  
+"
+"1","    parseWebReport                          html  
+"
+"1","    processSDA_WKT                          html  
+"
+"1","    seriesExtent                            html  
+"
+"1","    siblings                                html  
+"
+"1","    simplifyColorData                       html  
+"
+"1","    simplifyFragmentData                    html  
+"
+"1","    soilColor.wcs                           html  
+"
+"1","    soilDB-package                          html  
+"
+"1","    taxaExtent                              html  
+"
+"1","    uncode                                  html  
+"
+"1","    us_ss_timeline                          html  
+"
+"1","    waterDayYear                            html  
+"
+"1","** building package indices
+"
+"1","** testing if installed package can be loaded from temporary location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package can be loaded from final location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package keeps a record of temporary installation path
+"
+"1","* DONE (soilDB)
+"
+"2","
+"
+"2",""
+"2","The downloaded source packages are in
+	‘C:\Users\licit\AppData\Local\Temp\Rtmp2TP5Gn\downloaded_packages’"
+"2",""
+"2","
+"
+"0","install.packages(""package"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"1","Warning in "
+"1",""
+"1","install.packages"
+"1",""
+"1"," :
+  "
+"1",""
+"1","package ‘package’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages"
+"1",""
+"1","
+"
+"0","install.packages(""GGally"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/GGally_2.1.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1636690 bytes (1.6 MB)
+"
+"2","downloaded 1.6 MB
+
+"
+"1","package ‘GGally’ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\licit\AppData\Local\Temp\Rtmp2TP5Gn\downloaded_packages"
+"1",""
+"1","
+"
+"0","install.packages(""expss"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"1","
+"
+"1",""
+"1","  There is a binary version available but the source version is
+  later"
+"1",""
+"1",":
+"

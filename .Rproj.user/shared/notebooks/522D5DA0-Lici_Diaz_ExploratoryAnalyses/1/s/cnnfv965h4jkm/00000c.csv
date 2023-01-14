@@ -1,0 +1,73 @@
+"0","#install.packages(""reshape2"") "
+"0","#install.packages(""reshape"")"
+"0","#install.packages(""nycflights13"")"
+"0","#install.packages(""tableone"")"
+"0","#install.packages(""rvest"")"
+"0","install.packages(""yarrr"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/yarrr_0.1.5.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 3935807 bytes (3.8 MB)
+"
+"2","downloaded 3.8 MB
+
+"
+"1","package ‘yarrr’ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\licit\AppData\Local\Temp\Rtmp2TP5Gn\downloaded_packages"
+"1",""
+"1","
+"
+"0","install.packages(""aqp"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/aqp_1.42.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 3092855 bytes (2.9 MB)
+"
+"2","downloaded 2.9 MB
+
+"
+"1","package ‘aqp’ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\licit\AppData\Local\Temp\Rtmp2TP5Gn\downloaded_packages"
+"1",""
+"1","
+"
+"0","install.packages(""soilDB"")"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing package into ‘C:/Users/licit/OneDrive/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+"
+"1","
+"
+"1",""
+"1","  There is a binary version available but the source version is
+  later"
+"1",""
+"1",":
+"

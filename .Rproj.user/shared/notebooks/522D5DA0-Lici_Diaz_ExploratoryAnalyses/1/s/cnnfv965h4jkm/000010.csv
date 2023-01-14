@@ -1,0 +1,512 @@
+"1","
+"
+"2","installing the source package ‘expss’
+
+"
+"2","trying URL 'https://cran.rstudio.com/src/contrib/expss_0.11.4.tar.gz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 5003450 bytes (4.8 MB)
+"
+"2","downloaded 4.8 MB
+
+"
+"1","* installing *source* package 'expss' ...
+"
+"1","** package 'expss' successfully unpacked and MD5 sums checked
+"
+"1","** using staged installation
+"
+"1","** R
+"
+"1","** data
+"
+"1","*** moving datasets to lazyload DB
+"
+"1","** inst
+"
+"1","** byte-compile and prepare package for lazy loading
+"
+"1","** help
+"
+"1","*** installing help indices
+"
+"1","  converting help for package 'expss'
+"
+"1","    finding HTML links ... done
+"
+"1","    add_columns                             html  
+"
+"1","    add_rows                                html  
+"
+"1","    apply_labels                            html  
+"
+"1","    as.category                             html  
+"
+"1","    as.datatable_widget                     html  
+"
+"1","    as.dichotomy                            html  
+"
+"1","    as.etable                               html  
+"
+"1","    as.labelled                             html  
+"
+"1","    as_huxtable                             html  
+"
+"1","    compare_proportions                     html  
+"
+"1","    compute                                 html  
+"
+"1","    count_if                                html  
+"
+"1","    criteria                                html  
+"
+"1","    cross_cases                             html  
+"
+"1","    cross_fun                               html  
+"
+"1","    do_repeat                               html  
+"
+"1","    drop_empty_rows                         html  
+"
+"1","    expss                                   html  
+"
+"1","    expss.options                           html  
+"
+"1","    fctr                                    html  
+"
+"1","    fre                                     html  
+"
+"1","    htmlTable.etable                        html  
+"
+"1","    if_na                                   html  
+"
+"1","    info                                    html  
+"
+"1","    keep                                    html  
+"
+"1","    match_row                               html  
+"
+"1","    merge.etable                            html  
+"
+"1","    mrset                                   html  
+"
+"1","    finding level-2 HTML links ... done
+"
+"1","
+"
+"1","    name_dots                               html  
+"
+"1","    names2labels                            html  
+"
+"1","    nest                                    html  
+"
+"1","    net                                     html  
+"
+"1","    prepend_values                          html  
+"
+"1","    product_test                            html  
+"
+"1","    prop                                    html  
+"
+"1","    qc                                      html  
+"
+"1","    read_spss                               html  
+"
+"1","    recode                                  html  
+"
+"1","    reexports                               html  
+"
+"1","    set_caption                             html  
+"
+"1","    sheet                                   html  
+"
+"1","    significance                            html  
+"
+"1","    sort_asc                                html  
+"
+"1","    split_by                                html  
+"
+"1","    split_labels                            html  
+"
+"1","    sum_row                                 html  
+"
+"1","Rd warning: C:/Users/licit/AppData/Local/Temp/RtmpEPcwd8/R.INSTALL3d941ddf7f61/expss/man/sum_row.Rd:75: file link 'let' in package 'maditr' does not exist and so has been treated as a topic
+"
+"1","    tab_sort_asc                            html  
+"
+"1","    tables                                  html  
+"
+"1","    text_to_columns                         html  
+"
+"1","    unlab                                   html  
+"
+"1","    val_lab                                 html  
+"
+"1","    values2labels                           html  
+"
+"1","    var_lab                                 html  
+"
+"1","    vars                                    html  
+"
+"1","    vectors                                 html  
+"
+"1","    w_mean                                  html  
+"
+"1","    weight_by                               html  
+"
+"1","    where                                   html  
+"
+"1","    window_fun                              html  
+"
+"1","    write_labelled_csv                      html  
+"
+"1","    xl_write                                html  
+"
+"1","** building package indices
+"
+"1","** installing vignettes
+"
+"1","** testing if installed package can be loaded from temporary location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package can be loaded from final location
+"
+"1","*** arch - i386
+"
+"1","*** arch - x64
+"
+"1","** testing if installed package keeps a record of temporary installation path
+"
+"1","* DONE (expss)
+"
+"2","
+"
+"2",""
+"2","The downloaded source packages are in
+	‘C:\Users\licit\AppData\Local\Temp\Rtmp2TP5Gn\downloaded_packages’"
+"2",""
+"2","
+"
+"0","library(expss)"
+"2","Loading required package: maditr
+"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","
+To drop variable use NULL: let(mtcars, am = NULL) %>% head()
+
+"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"0","library(GGally)"
+"2","Loading required package: ggplot2
+"
+"2","Warning:"
+"2"," package ‘ggplot2’ was built under R version 4.1.1
+"
+"2","
+Attaching package: ‘ggplot2’
+
+"
+"2","The following object is masked from ‘package:expss’:
+
+    vars
+
+"
+"2","Registered S3 method overwritten by 'GGally':
+  method from   
+  +.gg   ggplot2
+"
+"0","library(aqp)"
+"2","This is aqp 1.42
+"
+"0","library(soilDB)"
+"0","library(tidyr)"
+"2","
+Attaching package: ‘tidyr’
+
+"
+"2","The following objects are masked from ‘package:expss’:
+
+    contains, nest
+
+"
+"0","library(MASS) "
+"0","library(reshape2) "
+"2","
+Attaching package: ‘reshape2’
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    smiths
+
+"
+"2","The following objects are masked from ‘package:maditr’:
+
+    dcast, melt
+
+"
+"0","library(reshape)"
+"2","
+Attaching package: ‘reshape’
+
+"
+"2","The following objects are masked from ‘package:reshape2’:
+
+    colsplit, melt, recast
+
+"
+"2","The following objects are masked from ‘package:tidyr’:
+
+    expand, smiths
+
+"
+"2","The following object is masked from ‘package:maditr’:
+
+    melt
+
+"
+"0","library(Hmisc)"
+"2","Loading required package: lattice
+"
+"2","Loading required package: survival
+"
+"2","Loading required package: Formula
+"
+"2","Warning:"
+"2"," package ‘Formula’ was built under R version 4.1.1
+"
+"2","Registered S3 methods overwritten by 'Hmisc':
+  method                 from 
+  [.labelled             expss
+  print.labelled         expss
+  as.data.frame.labelled expss
+"
+"2","
+Attaching package: ‘Hmisc’
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+"
+"0","library(psych)"
+"2","
+Attaching package: ‘psych’
+
+"
+"2","The following object is masked from ‘package:Hmisc’:
+
+    describe
+
+"
+"2","The following object is masked from ‘package:aqp’:
+
+    sim
+
+"
+"2","The following objects are masked from ‘package:ggplot2’:
+
+    %+%, alpha
+
+"
+"0","library(ggpubr)"
+"2","Warning:"
+"2"," package ‘ggpubr’ was built under R version 4.1.1
+"
+"2","
+Attaching package: ‘ggpubr’
+
+"
+"2","The following object is masked from ‘package:expss’:
+
+    compare_means
+
+"
+"0","library(readr)"
+"2","
+Attaching package: ‘readr’
+
+"
+"2","The following object is masked from ‘package:maditr’:
+
+    cols
+
+"
+"0","library(tibble)"
+"2","Warning:"
+"2"," package ‘tibble’ was built under R version 4.1.1
+"
+"0","library(dplyr) "
+"2","Warning:"
+"2"," package ‘dplyr’ was built under R version 4.1.1
+"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:Hmisc’:
+
+    src, summarize
+
+"
+"2","The following object is masked from ‘package:reshape’:
+
+    rename
+
+"
+"2","The following object is masked from ‘package:MASS’:
+
+    select
+
+"
+"2","The following objects are masked from ‘package:aqp’:
+
+    combine, slice
+
+"
+"2","The following objects are masked from ‘package:expss’:
+
+    compute, contains, na_if, recode, vars
+
+"
+"2","The following objects are masked from ‘package:maditr’:
+
+    between, coalesce, first, last
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(magrittr)"
+"2","
+Attaching package: ‘magrittr’
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    extract
+
+"
+"2","The following objects are masked from ‘package:expss’:
+
+    and, equals, not, or
+
+"
+"0","library(lubridate)"
+"2","
+Attaching package: ‘lubridate’
+
+"
+"2","The following object is masked from ‘package:reshape’:
+
+    stamp
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+
+"
+"0","library(nycflights13)"
+"0","library(tableone)"
+"0","library(survival)"
+"0","library(""yarrr"")"
+"2","Loading required package: jpeg
+"
+"2","Loading required package: BayesFactor
+"
+"2","Loading required package: coda
+"
+"2","Warning:"
+"2"," package ‘coda’ was built under R version 4.1.1
+"
+"2","Loading required package: Matrix
+"
+"2","
+Attaching package: ‘Matrix’
+
+"
+"2","The following object is masked from ‘package:reshape’:
+
+    expand
+
+"
+"2","The following objects are masked from ‘package:tidyr’:
+
+    expand, pack, unpack
+
+"
+"2","************
+Welcome to BayesFactor 0.9.12-4.3. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
+
+Type BFManual() to open the manual.
+************
+"
+"2","Loading required package: circlize
+"
+"2","========================================
+circlize version 0.4.15
+CRAN page: https://cran.r-project.org/package=circlize
+Github page: https://github.com/jokergoo/circlize
+Documentation: https://jokergoo.github.io/circlize_book/book/
+
+If you use it in published research, please cite:
+Gu, Z. circlize implements and enhances circular visualization
+  in R. Bioinformatics 2014.
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(circlize))
+========================================
+
+"
+"2","yarrr v0.1.5. Citation info at citation('yarrr'). Package guide at yarrr.guide()
+"
+"2","Email me at Nathaniel.D.Phillips.is@gmail.com
+"
+"2","
+Attaching package: ‘yarrr’
+
+"
+"2","The following object is masked from ‘package:ggplot2’:
+
+    diamonds
+
+"
+"0","library(""ggplot2"")"
+"0","library(""scales"")"
+"2","Warning:"
+"2"," package ‘scales’ was built under R version 4.1.1
+"
+"2","
+Attaching package: ‘scales’
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    col_factor
+
+"
+"2","The following objects are masked from ‘package:psych’:
+
+    alpha, rescale
+
+"
+"0","library(stats)"

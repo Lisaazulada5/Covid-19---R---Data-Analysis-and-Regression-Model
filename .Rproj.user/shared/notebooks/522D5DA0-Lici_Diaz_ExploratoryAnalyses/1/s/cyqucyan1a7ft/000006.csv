@@ -1,0 +1,8 @@
+"0","example_lab_data[example_lab_data == ''] <- NA"
+"0","synthetic_data[synthetic_data == ''] <- NA"
+"0","example_lab_data[example_lab_data == 'UTC'] <- NA"
+"0","synthetic_data[synthetic_data == 'UTC'] <- NA"
+"0","example_lab_data[example_lab_data == 'NDA'] <- NA"
+"0","synthetic_data[synthetic_data == 'NDA'] <- NA"
+"0","example_lab_data[example_lab_data == 'N/A'] <- NA"
+"0","synthetic_data[synthetic_data == 'N/A'] <- NA"

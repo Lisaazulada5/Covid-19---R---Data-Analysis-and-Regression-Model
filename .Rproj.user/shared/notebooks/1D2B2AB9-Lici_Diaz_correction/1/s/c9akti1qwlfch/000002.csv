@@ -1,0 +1,4 @@
+"0","ggqqplot(synthetic_data$bmi_log)"
+"2","Error in .check_data(data, x, y, combine = combine | merge != ""none"") : 
+  argument ""data"" is missing, with no default
+"

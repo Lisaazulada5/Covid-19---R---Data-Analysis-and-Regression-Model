@@ -1,0 +1,2 @@
+"0","repeated_patients_syntetic_data <- data.frame(table(synthetic_data$patient_id))"
+"0","repeated_patients_syntetic_data <- repeated_patients_syntetic_data[repeated_patients_syntetic_data$Freq > 1,]"

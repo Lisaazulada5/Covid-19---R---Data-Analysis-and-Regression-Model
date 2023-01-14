@@ -1,0 +1,11 @@
+"0","synthetic_data$days_to_discharge_log = log(synthetic_data$days_to_discharge)"
+"0","ggqqplot(synthetic_data$days_to_discharge_log)"
+"2","Warning:"
+"2"," Removed 69 rows containing non-finite values (stat_qq).
+"
+"2","Warning:"
+"2"," Removed 69 rows containing non-finite values (stat_qq_line).
+"
+"2","Warning:"
+"2"," Removed 69 rows containing non-finite values (stat_qq_line).
+"

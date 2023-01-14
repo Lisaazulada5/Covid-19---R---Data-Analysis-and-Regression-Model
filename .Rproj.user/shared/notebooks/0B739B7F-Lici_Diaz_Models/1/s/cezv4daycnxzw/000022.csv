@@ -1,0 +1,2 @@
+"0","example_lab_data <- read.table('example_lab_data.csv', sep=',', header=TRUE)"
+"0","head(example_lab_data)"

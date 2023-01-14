@@ -1,0 +1,19 @@
+"0","library(""scales"")
+"
+"2","Warning:"
+"2"," package ‘scales’ was built under R version 4.1.1
+"
+"2","
+Attaching package: ‘scales’
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    col_factor
+
+"
+"2","The following objects are masked from ‘package:psych’:
+
+    alpha, rescale
+
+"

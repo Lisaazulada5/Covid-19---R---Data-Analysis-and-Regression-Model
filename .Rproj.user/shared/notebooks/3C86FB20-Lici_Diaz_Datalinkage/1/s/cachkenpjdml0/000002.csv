@@ -1,0 +1,9 @@
+"0","theme_economist("
+"0","  base_size = 10,"
+"0","  base_family = ""sans"","
+"0","  horizontal = TRUE,"
+"0","  dkpanel = FALSE"
+"0",")"
+"2","Error in theme_economist(base_size = 10, base_family = ""sans"", horizontal = TRUE,  : 
+  could not find function ""theme_economist""
+"
